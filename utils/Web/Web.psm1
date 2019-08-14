@@ -4,5 +4,5 @@ function Get-List-On-Web {
         [string] $listUrl
     )
 
-    return $web.GetList($web.Url, $listUrl)
+    return $web.GetList($web.Url + '/lists/' + $listUrl)
 }
