@@ -1,35 +1,34 @@
 "use strict";
 
 module.exports = {
-  // Добавим описание на русском языке ко всем типам
   types: [
     {
       value: "build",
-      name: "build:     Сборка проекта или изменения внешних зависимостей"
+      name: "build:     Project build or dependencies changing"
     },
-    { value: "ci", name: "ci:        Настройка CI и работа со скриптами" },
-    { value: "docs", name: "docs:      Обновление документации" },
-    { value: "feat", name: "feat:      Добавление нового функционала" },
-    { value: "fix", name: "fix:       Исправление ошибок" },
+    { value: "ci", name: "ci:        CI setup and scripts work" },
+    { value: "docs", name: "docs:      Documentation update" },
+    { value: "feat", name: "feat:      New Features" },
+    { value: "fix", name: "fix:       Bugfix" },
     {
       value: "perf",
-      name: "perf:      Изменения направленные на улучшение производительности"
+      name: "perf:      Performance improvements"
     },
     {
       value: "refactor",
       name:
-        "refactor:  Правки кода без исправления ошибок или добавления новых функций"
+        "refactor:  Refactor works without adding new improvements and bugfixes"
     },
-    { value: "revert", name: "revert:    Откат на предыдущие коммиты" },
+    { value: "revert", name: "revert:    Rollback to previous commits" },
     {
       value: "style",
       name:
-        "style:     Правки по кодстайлу (табы, отступы, точки, запятые и т.д.)"
+        "style:     Styleguide code fixes (tabs, spaces, dots, commas, etc...)"
     },
-    { value: "test", name: "test:      Добавление тестов" }
+    { value: "test", name: "test:      Adding tests" }
   ],
 
-  // Область. Она характеризует фрагмент кода, которую затронули изменения
+  // Scope. It describes code fragment that was changed
   scopes: [
     { name: "components" },
     { name: "tutorial" },
@@ -37,7 +36,7 @@ module.exports = {
     { name: "product" }
   ],
 
-  // Возможность задать спец ОБЛАСТЬ для определенного типа коммита (пример для 'fix')
+  // It is possible to set SCOPE for specific commit type (for example, for 'fix')
   /*
   scopeOverrides: {
     fix: [
@@ -48,29 +47,29 @@ module.exports = {
   },
   */
 
-  // Поменяем дефолтные вопросы
+  // Default questions override
   messages: {
-    type: "Какие изменения вы вносите?",
-    scope: "\nВыберите ОБЛАСТЬ, которую вы изменили (опционально):",
-    // Спросим если allowCustomScopes в true
-    customScope: "Укажите свою ОБЛАСТЬ:",
-    subject: "Напишите КОРОТКОЕ описание в ПОВЕЛИТЕЛЬНОМ наклонении:\n",
+    type: "What type of changes are you making?",
+    scope: "\nSet affected SCOPE (optional):",
+    // Asking if allowCustomScopes = true
+    customScope: "Set SCOPE:",
+    subject: "Write SHORT description of changes in IMMEDIATE mood:\n",
     body:
-      'Напишите ПОДРОБНОЕ описание (опционально). Используйте "|" для новой строки:\n',
-    breaking: "Список BREAKING CHANGES (опционально):\n",
+      'Write LONG description (optional). User "|" for new line and carret return:\n',
+    breaking: "List of BREAKING CHANGES (optional):\n",
     footer:
-      "Место для мета данных (тикетов, ссылок и остального). Например: SECRETMRKT-700, SECRETMRKT-800:\n",
-    confirmCommit: "Вас устраивает получившийся коммит?"
+      "Placeholder for metadata (tickets, links, etc...). Example: SECRETMRKT-700, SECRETMRKT-800:\n",
+    confirmCommit: "Do you approve created commit?"
   },
 
-  // Разрешим собственную ОБЛАСТЬ
+  // Allow custom SCOPE
   allowCustomScopes: true,
 
-  // Запрет на Breaking Changes
+  // Deny breaking changes
   allowBreakingChanges: false,
 
-  // Префикс для нижнего колонтитула
-  footerPrefix: "МЕТА ДАННЫЕ:",
+  // Prefix for bottom colontitle
+  footerPrefix: "META DATA:",
 
   // limit subject length
   subjectLimit: 72

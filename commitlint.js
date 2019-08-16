@@ -1,32 +1,32 @@
-// Файл создан на основе @commitlint/config-conventional
+// Based on @commitlint/config-conventional
 
 module.exports = {
     rules: {
-      // Тело коммита должно начинаться с пустой строки
+      // Commit body must starts from empty line
       "body-leading-blank": [2, "always"],
   
-      // Нижний колонтитул коммита должен начинаться с пустой строки
+      // Bottom colontitle must starts from empty line
       "footer-leading-blank": [2, "always"],
   
-      // Максимальная длина заголовка 72 символа
+      // Max title length is 72 chars
       "header-max-length": [2, "always", 72],
   
-      // Область всегда только в нижнем регистре
+      // Code scope always in lower case
       "scope-case": [2, "always", "lower-case"],
   
-      // Описание не может быть пустым
+      // Description can be empty
       "subject-empty": [2, "never"],
   
-      // Описание не должно заканчиваться '.'
+      // Description must ends with '.'
       "subject-full-stop": [2, "never", "."],
   
-      // Тип всегда только в нижнем регистре
+      // Type always in lower case
       "type-case": [2, "always", "lower-case"],
   
-      // Тип не может быть пустым
+      // Type cannot be empty
       "type-empty": [2, "never"],
   
-      // Перечислим все возможные варианты коммитов
+      // List of all allowed commit types
       "type-enum": [
         2,
         "always",
