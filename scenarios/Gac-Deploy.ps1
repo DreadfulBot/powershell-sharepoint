@@ -17,4 +17,4 @@ foreach($i in $dllPath) {
 	Write-Host "-----------------------------------"
 }
 
-& "$PSScriptRoot\rec-pools.ps1"
+& "$PSScriptRoot\Recycle-Pools.ps1"
