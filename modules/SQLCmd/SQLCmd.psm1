@@ -80,6 +80,15 @@ Function Restore-Database(
     Exec $command $serverInstance
 }
 
+Function Backup-Database (
+    [System.String] $dbName,
+    [System.String] $dbFilePath,
+    [System.String] $serverInstance
+) {
+    $command = "BACKUP DATABASE [$dbName] TO DISK = '$dbFilePath'"
+    Exec $command $serverInstance
+}
+
 Function Set-Recovery-Simple(
     [System.String] $dbName,
     [System.String] $serverInstance
