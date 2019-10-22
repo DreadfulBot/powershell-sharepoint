@@ -26,7 +26,7 @@ Set-Database-Offline $db.name $serverInstance
 
 Write-Host "[x] restorting database $($db.name) from file $($db.path)"
 $path = Join-Path -Path $hostInfo.path -ChildPath $db.path
-Restore-Database $db.name  $path $serverInstance
+Restore-Database $db.name $path $serverInstance
 
 Write-Host "[x] taking database $($db.name) online"
 Set-Database-Online $db.name $serverInstance
