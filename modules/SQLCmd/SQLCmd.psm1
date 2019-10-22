@@ -79,3 +79,29 @@ Function Restore-Database(
     $command = "RESTORE DATABASE [$dbName] FROM DISK = '$dbFilePath' WITH REPLACE"
     Exec $command $serverInstance
 }
+
+Function Set-Recovery-Simple(
+    [System.String] $dbName,
+    [System.String] $serverInstance
+) {
+    $command = "ALTER DATABASE [$dbName] SET RECOVERY SIMPLE"
+    Exec $command $serverInstance
+}
+
+Function Set-Recovery-Full(
+    [System.String] $dbName,
+    [System.String] $serverInstance
+) {
+    $command = "ALTER DATABASE [$dbName] SET RECOVERY FULL"
+    Exec $command $serverInstance
+}
+
+Function Shrink-Log-File(
+    [System.String] $dbName,
+    [System.String] $serverInstance,
+    [System.String] $logFileName = ""
+) {
+    $logFileName = if ($logFileName -eq "") { "$dbName" + "_log" } Else { $logFileName }
+    $command = "USE [$dbName]; DBCC SHRINKFILE ($logFileName, 1)"
+    Exec $command $serverInstance
+}

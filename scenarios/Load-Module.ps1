@@ -2,4 +2,4 @@ Param(
     [string] $moduleName
 )
 
-Import-Module $PSScriptRoot\..\utils\$moduleName -Force
+Import-Module $PSScriptRoot\..\modules\$moduleName -Force
