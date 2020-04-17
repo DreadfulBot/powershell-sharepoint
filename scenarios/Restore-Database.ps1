@@ -4,7 +4,7 @@ $serverInstance = "BOT-SP2016"
 
 $db = @{
     name = "SharePoint_Content_80"
-    path = "\db\ksup\content\2019.09.16.00.00.07.bak"
+    path = "\db\ksup\content\test\2020.04.17.02.00.29.bak"
 }
 
 $hostInfo = @{
