@@ -4,12 +4,12 @@ $serverInstance = "BOT-SP2016"
 
 $db = @{
     name = "SharePoint_Content_80"
-    path = "\db\ksup\content\test\2020.04.17.02.00.29.bak"
+    path = "\db\ksup\content\test\2020.09.10.00.00.04.bak"
 }
 
 $hostInfo = @{
-    path = $env:hostPath
-    user = $env:hostUser
+    path     = $env:hostPath
+    user     = $env:hostUser
     password = $env:hostPassword
 }
 
