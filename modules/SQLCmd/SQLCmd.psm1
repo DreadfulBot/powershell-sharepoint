@@ -2,7 +2,7 @@ Function Exec(
     [System.String]$command,
     [System.String]$serverInstance
 ) {
-    Invoke-Sqlcmd -Query $command -ServerInstance $ServerInstance
+    Invoke-Sqlcmd -Query $command -ServerInstance $ServerInstance -QueryTimeout 65535
 }
 
 Function Test(
